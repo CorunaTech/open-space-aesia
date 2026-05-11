@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --page-bg: #f6f0e6;
+  --page-ink: #1f2937;
+}
+
+html {
+  background:
+    radial-gradient(circle at top, rgba(245, 158, 11, 0.14), transparent 24%),
+    linear-gradient(180deg, #fffaf2 0%, #f5efe5 52%, #f3eee7 100%);
+  color: var(--page-ink);
+}
+
+body {
+  font-family:
+    "Instrument Sans",
+    "Avenir Next",
+    "Segoe UI",
+    sans-serif;
+  background: transparent;
+}
+
+h1,
+h2,
+h3 {
+  font-family:
+    "Iowan Old Style",
+    "Palatino Linotype",
+    "Book Antiqua",
+    serif;
+}
+
+::selection {
+  background: rgba(217, 119, 6, 0.18);
+}
