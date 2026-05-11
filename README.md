@@ -1,46 +1,24 @@
-# Astro Starter Kit: Basics
+# CorunaTech x AESIA / 19 Mayo 2026
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+El evento del próximo 19 de mayo en la sede de la [AESIA](https://aesia.digital.gob.es/es) (Agencia Española de Supervisión de la Inteligencia Artificial) en A Coruña es un encuentro técnico organizado junto a la comunidad [CoruñaTech](https://corunatech.org/).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Resumen de la jornada
 
-## 🚀 Project Structure
+Aquí tienes los puntos clave de lo que será la jornada:
 
-Inside of your Astro project, you'll see the following folders and files:
+- Fecha y Horario: Martes 19 de mayo. El horario propuesto es de 18:30 a 20:30.
+- Lugar: Oficinas de la AESIA (Centro Cívico del Ayuntamiento). [Rúa de Veeduría, 2, 15001 A Coruña](https://maps.app.goo.gl/37k1Z9JGH4ZDN1bH6).
+- Aforo: Dos salas con una capacidad total de máximo 40 personas.
+- Dinámica: Open Space con perfiles técnicos del ecosistema de la ciudad y el personal de la AESIA.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## ¿Qué es un Open Space?
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Un Open Space es un formato de reunión auto-organizada donde los asistentes crean la agenda en el momento. En lugar de tener una lista de oradores cerrada, el evento funciona bajo estas premisas:
 
-## 🧞 Commands
+1. Creación de la Agenda: Al inicio, los participantes proponen temas o problemas reales sobre los que quieren debatir o aprender (en este caso, centrados en la IA).
+2. Distribución en "Tracks": Los temas elegidos se dividen en diferentes espacios o grupos (en este evento habrá dos salas en paralelo).
+3. Libertad de Movimiento: Se rige por la "ley de los dos pies": si en algún momento sientes que no estás aprendiendo ni aportando nada en un grupo, tienes la libertad de moverte a otro.
+4. Horizontalidad: Fomenta la participación directa y el intercambio de conocimientos de tú a tú, eliminando las barreras entre "expertos" y "audiencia".
+5. El encuentro se rige por la [Chatham House Rule](https://www.chathamhouse.org/about-us/chatham-house-rule).
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+En resumen, es una jornada intensiva de debate técnico donde el valor lo generan las conversaciones entre los propios profesionales y el personal de la agencia.
