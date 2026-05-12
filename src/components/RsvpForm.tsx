@@ -1,17 +1,43 @@
 import React, { useState } from 'react';
 
+const WEBHOOK_URL = 'https://activepieces.gpul.org/api/v1/webhooks/sRVC9EweweIgSTqg4zHUp/sync';
+
 export default function RsvpForm() {
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
-    // Simulate API call
-    setTimeout(() => setStatus('success'), 1000);
+    setErrorMessage(null);
+
+    try {
+      const res = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+        }),
+      });
+
+      if (!res.ok) throw new Error('Request failed');
+
+      // Expect: 200 { success: true }
+      const data = (await res.json()) as { success?: boolean };
+      if (!data?.success) throw new Error('Unsuccessful');
+
+      setStatus('success');
+    } catch {
+      setStatus('error');
+      setErrorMessage('No se ha podido enviar. Inténtalo de nuevo en unos segundos.');
+    }
   };
 
   if (status === 'success') {
@@ -59,6 +85,12 @@ export default function RsvpForm() {
       >
         {status === 'submitting' ? 'PROCESANDO...' : 'CONFIRMAR ASISTENCIA'}
       </button>
+
+      {status === 'error' && (
+        <p className="text-xs font-bold uppercase text-red-700 text-center">
+          {errorMessage ?? 'Error al enviar.'}
+        </p>
+      )}
       
       <p className="text-[10px] uppercase opacity-50 text-center">
         Al hacer clic, aceptas que tus datos se utilicen únicamente para la gestión de este evento.
