@@ -1,13 +1,94 @@
 ---
-import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
-import logo from '../assets/logo.svg';
+import RsvpForm from '../components/RsvpForm';
+import { Image } from 'astro:assets';
+import ctLogo from '../assets/logo.svg';
+import aesiaLogo from '../assets/aesia.png';
 ---
 
 <Layout>
-	<main class="flex min-h-screen items-center justify-center px-6 text-center">
-		<div class="flex flex-col items-center gap-6">
-			<Image src={logo} alt="Logo" class="h-auto w-40" />
-		</div>
+	<main class="max-w-5xl mx-auto px-6 py-12 space-y-20">
+		<!-- Header / Logos -->
+		<header class="flex flex-col sm:flex-row items-center justify-between gap-8 border-b-4 border-black pb-8">
+			<div class="flex items-center gap-6">
+				<a href="https://corunatech.org/" target="_blank" rel="noopener noreferrer" class="hover:opacity-70 transition-opacity">
+					<Image src={ctLogo} alt="CorunaTech Logo" class="h-16 w-auto grayscale" />
+				</a>
+				<div class="text-4xl font-black tracking-tighter">X</div>
+				<a href="https://aesia.digital.gob.es/es" target="_blank" rel="noopener noreferrer" class="hover:opacity-70 transition-opacity">
+					<Image src={aesiaLogo} alt="AESIA Logo" class="h-16 w-auto grayscale" />
+				</a>
+			</div>
+			<div class="text-right">
+				<p class="font-bold text-xl uppercase">19 Mayo 2026</p>
+				<p class="text-sm">A CORUÑA, ESPAÑA</p>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="space-y-4">
+			<h1 class="text-6xl sm:text-8xl md:text-9xl leading-[0.8] tracking-tighter">
+				EL FUTURO<br />DE LA IA
+			</h1>
+			<p class="text-xl max-w-2xl font-bold uppercase border-l-8 border-black pl-4 py-2">
+				Encuentro técnico y Open Space en la sede de la Agencia Española de Supervisión de la Inteligencia Artificial.
+			</p>
+		</section>
+
+		<!-- Info Grid -->
+		<section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<div class="brutalist-card space-y-4">
+				<h2 class="text-2xl underline decoration-4">Detalles</h2>
+				<ul class="space-y-2 font-bold uppercase">
+					<li>📅 Martes 19 de Mayo</li>
+					<li>⏰ 18:30 - 20:30</li>
+					<li>📍 Rúa de Veeduría, 2 (AESIA)</li>
+					<li>👥 Aforo limitado: 40 personas</li>
+				</ul>
+			</div>
+			<div class="brutalist-card">
+				<h2 class="text-2xl">Participación Directa</h2>
+				<p class="text-sm font-bold">
+					Contaremos con la participación de perfiles de la institución. 
+					Una oportunidad única para preguntar, debatir y obtener respuestas directas 
+					en un entorno horizontal y bajo la Chatham House Rule.
+				</p>
+			</div>
+		</section>
+
+		<!-- Open Space Steps -->
+		<section class="space-y-8">
+			<h2 class="text-4xl text-center">¿Cómo funciona el Open Space?</h2>
+			<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+				<div class="brutalist-card text-center hover:bg-yellow-100 transition-colors">
+					<div class="text-5xl font-black mb-4">01</div>
+					<h3 class="text-xl mb-2">Propón</h3>
+					<p class="text-xs uppercase font-bold">Tú creas la agenda. Propón temas o problemas reales de IA al inicio.</p>
+				</div>
+				<div class="brutalist-card text-center hover:bg-yellow-100 transition-colors">
+					<div class="text-5xl font-black mb-4">02</div>
+					<h3 class="text-xl mb-2">Debate</h3>
+					<p class="text-xs uppercase font-bold">Dos salas en paralelo. Charlas auto-organizadas sin barreras experto-audiencia.</p>
+				</div>
+				<div class="brutalist-card text-center hover:bg-yellow-100 transition-colors">
+					<div class="text-5xl font-black mb-4">03</div>
+					<h3 class="text-xl mb-2">Muévete</h3>
+					<p class="text-xs uppercase font-bold">Ley de los dos pies: si no aprendes ni aportas, busca otro espacio libremente.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- RSVP Section -->
+		<section id="rsvp" class="space-y-6 pt-12 border-t-4 border-black">
+			<h2 class="text-4xl text-center">Reserva tu plaza</h2>
+			<RsvpForm client:load />
+		</section>
+
+		<footer class="text-center text-xs opacity-50 uppercase py-12 space-y-2">
+			<p>CorunaTech x AESIA — 2026</p>
+			<p>
+				Este sitio es <a href="https://github.com/CorunaTech/open-space-aesia" class="underline hover:opacity-100 transition-opacity">open source</a>
+			</p>
+		</footer>
 	</main>
 </Layout>

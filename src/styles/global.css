@@ -1,36 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --page-bg: #f6f0e6;
-  --page-ink: #1f2937;
+  --page-bg: #ffffff;
+  --page-ink: #000000;
+  --brutalist-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
 }
 
 html {
-  background:
-    radial-gradient(circle at top, rgba(245, 158, 11, 0.14), transparent 24%),
-    linear-gradient(180deg, #fffaf2 0%, #f5efe5 52%, #f3eee7 100%);
+  background: var(--page-bg);
   color: var(--page-ink);
 }
 
 body {
-  font-family:
-    "Instrument Sans",
-    "Avenir Next",
-    "Segoe UI",
-    sans-serif;
-  background: transparent;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: var(--page-bg);
 }
 
 h1,
 h2,
 h3 {
-  font-family:
-    "Iowan Old Style",
-    "Palatino Linotype",
-    "Book Antiqua",
-    serif;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.brutalist-card {
+  border: 4px solid black;
+  box-shadow: var(--brutalist-shadow);
+  padding: 1.5rem;
+  background: white;
+  color: black;
+}
+
+.brutalist-card.bg-black {
+  background: black;
+  color: white;
+}
+
+.brutalist-card.bg-black h2 {
+  color: white;
+}
+
+.brutalist-button {
+  border: 4px solid black;
+  box-shadow: var(--brutalist-shadow);
+  padding: 0.5rem 1rem;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.brutalist-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
 }
 
 ::selection {
-  background: rgba(217, 119, 6, 0.18);
+  background: black;
+  color: white;
 }
