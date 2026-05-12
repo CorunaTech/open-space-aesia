@@ -43,10 +43,10 @@ export default function RsvpForm() {
   if (status === 'success') {
     return (
       <div className="brutalist-card bg-black text-white text-center py-12">
-        <h3 className="text-3xl mb-4">¡PLAZA RESERVADA!</h3>
-        <p className="uppercase font-bold">Tu inscripción se ha registrado correctamente.</p>
+        <h3 className="text-3xl mb-4">¡SOLICITUD RECIBIDA!</h3>
+        <p className="uppercase font-bold">Hemos recibido tu inscripción correctamente.</p>
         <p className="uppercase font-bold mt-2">
-          Revisa tu bandeja de entrada — te hemos enviado un correo de confirmación.
+          Te avisaremos en cuanto tengamos la confirmación de tu plaza.
         </p>
         <p className="text-xs mt-8 opacity-70">NOS VEMOS EL 19 DE MAYO</p>
       </div>
