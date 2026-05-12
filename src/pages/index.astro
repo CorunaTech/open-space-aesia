@@ -14,13 +14,13 @@ import aesiaLogo from '../assets/aesia.png';
 				<a href="https://corunatech.org/" target="_blank" rel="noopener noreferrer" class="hover:opacity-70 transition-opacity">
 					<Image src={ctLogo} alt="CorunaTech Logo" class="h-16 w-auto grayscale" />
 				</a>
-				<div class="text-4xl font-black tracking-tighter">X</div>
+				<div class="text-4xl font-black leading-none">x</div>
 				<a href="https://aesia.digital.gob.es/es" target="_blank" rel="noopener noreferrer" class="hover:opacity-70 transition-opacity">
 					<Image src={aesiaLogo} alt="AESIA Logo" class="h-16 w-auto grayscale" />
 				</a>
 			</div>
 			<div class="text-right">
-				<p class="font-bold text-xl uppercase">19 Mayo 2026</p>
+				<p class="font-bold text-xl uppercase text-accent">19 Mayo 2026</p>
 				<p class="text-sm">A CORUÑA, ESPAÑA</p>
 			</div>
 		</header>
@@ -30,28 +30,29 @@ import aesiaLogo from '../assets/aesia.png';
 			<h1 class="text-6xl sm:text-8xl md:text-9xl leading-[0.8] tracking-tighter">
 				EL FUTURO<br />DE LA IA
 			</h1>
-			<p class="text-xl max-w-2xl font-bold uppercase border-l-8 border-black pl-4 py-2">
-				Encuentro técnico y Open Space en la sede de la Agencia Española de Supervisión de la Inteligencia Artificial.
+			<p class="text-xl max-w-3xl font-bold uppercase border-l-8 border-accent pl-4 py-2">
+				Una tarde de debate abierto sobre la IA que queremos: <br> sus valores, sus límites y lo que construimos alrededor.
 			</p>
 		</section>
 
 		<!-- Info Grid -->
 		<section class="grid grid-cols-1 md:grid-cols-2 gap-8">
 			<div class="brutalist-card space-y-4">
-				<h2 class="text-2xl underline decoration-4">Detalles</h2>
+				<h2 class="text-2xl border-b-2 border-black pb-2">Detalles</h2>
 				<ul class="space-y-2 font-bold uppercase">
 					<li>📅 Martes 19 de Mayo</li>
 					<li>⏰ 18:30 - 20:30</li>
 					<li>📍 Rúa de Veeduría, 2 (AESIA)</li>
 					<li>👥 Aforo limitado: 40 personas</li>
+					<li>🗂️ Formato: Open Space</li>
 				</ul>
 			</div>
-			<div class="brutalist-card">
-				<h2 class="text-2xl">Participación Directa</h2>
+			<div class="brutalist-card space-y-4">
+				<h2 class="text-2xl border-b-2 border-black pb-2">Participación Directa</h2>
 				<p class="text-sm font-bold">
-					Contaremos con la participación de perfiles de la institución. 
-					Una oportunidad única para preguntar, debatir y obtener respuestas directas 
-					en un entorno horizontal y bajo la Chatham House Rule.
+					Una oportunidad para preguntar, debatir y obtener respuestas directas en un entorno horizontal y bajo la Chatham House Rule.
+					<br></br>
+					Contaremos con la participación de perfiles de la <span class="text-accent">Agencia Española de Supervisión de la Inteligencia Artificial</span> y con miembros de la <span class="text-accent">comunidad tecnológica</span>.
 				</p>
 			</div>
 		</section>
@@ -63,17 +64,17 @@ import aesiaLogo from '../assets/aesia.png';
 				<div class="brutalist-card text-center hover:bg-yellow-100 transition-colors">
 					<div class="text-5xl font-black mb-4">01</div>
 					<h3 class="text-xl mb-2">Propón</h3>
-					<p class="text-xs uppercase font-bold">Tú creas la agenda. Propón temas o problemas reales de IA al inicio.</p>
+					<p class="text-xs uppercase font-bold">Propondremos <span class="text-accent">temas o problemas reales</span> al inicio y por <span class="text-accent">votación</span> se decidirá cuáles se discutirán.</p>
 				</div>
 				<div class="brutalist-card text-center hover:bg-yellow-100 transition-colors">
 					<div class="text-5xl font-black mb-4">02</div>
 					<h3 class="text-xl mb-2">Debate</h3>
-					<p class="text-xs uppercase font-bold">Dos salas en paralelo. Charlas auto-organizadas sin barreras experto-audiencia.</p>
+					<p class="text-xs uppercase font-bold">Charlas <span class="text-accent">auto-organizadas</span> en <span class="text-accent">dos salas en paralelo</span> sin barreras ni jerarquías.</p>
 				</div>
 				<div class="brutalist-card text-center hover:bg-yellow-100 transition-colors">
 					<div class="text-5xl font-black mb-4">03</div>
 					<h3 class="text-xl mb-2">Muévete</h3>
-					<p class="text-xs uppercase font-bold">Ley de los dos pies: si no aprendes ni aportas, busca otro espacio libremente.</p>
+					<p class="text-xs uppercase font-bold"><span class="text-accent">Ley de los dos pies</span>: si no aprendes ni aportas, cambia de espacio libremente.</p>
 				</div>
 			</div>
 		</section>
@@ -84,11 +85,9 @@ import aesiaLogo from '../assets/aesia.png';
 			<RsvpForm client:load />
 		</section>
 
-		<footer class="text-center text-xs opacity-50 uppercase py-12 space-y-2">
-			<p>CorunaTech x AESIA — 2026</p>
-			<p>
-				Este sitio es <a href="https://github.com/CorunaTech/open-space-aesia" class="underline hover:opacity-100 transition-opacity">open source</a>
-			</p>
+		<footer class="flex flex-wrap justify-between gap-2 text-xs opacity-50 uppercase py-12 border-t-4 border-black">
+			<p>CorunaTech x AESIA</p>
+			<p>2026 — Este sitio es <a href="https://github.com/CorunaTech/open-space-aesia" class="underline hover:opacity-100 transition-opacity">open source</a></p>
 		</footer>
 	</main>
 </Layout>
