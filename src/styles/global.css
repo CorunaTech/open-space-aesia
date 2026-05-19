@@ -68,6 +68,57 @@ h3 {
   box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
 }
 
+.soldout-form {
+  position: relative;
+  overflow: hidden;
+  opacity: 0.7;
+}
+
+.soldout-form::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.2) 0,
+      rgba(255, 255, 255, 0.2) 12px,
+      rgba(0, 0, 0, 0.04) 12px,
+      rgba(0, 0, 0, 0.04) 24px
+    );
+}
+
+.soldout-stamp {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%) rotate(-7deg);
+  width: min(88%, 540px);
+  border: 6px solid #b91c1c;
+  background: #fff1f2;
+  color: #991b1b;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.9);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.soldout-stamp__title {
+  display: block;
+  font-size: clamp(2.25rem, 7vw, 4.5rem);
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.soldout-stamp__note {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
 ::selection {
   background: black;
   color: white;
